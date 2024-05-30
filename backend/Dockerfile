@@ -6,7 +6,7 @@ ENV $(cat .env)
 WORKDIR /opt/  
 COPY ./package.json ./yarn.lock ./  
 ENV PATH /opt/node\_modules/.bin:$PATH  
-RUN yarn config set network-timeout 1200000 -g && yarn install  
+RUN sudo yarn config set network-timeout 600000 -g && yarn install  
 WORKDIR /opt/app  
 COPY ./ .  
 RUN yarn build  
