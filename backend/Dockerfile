@@ -1,8 +1,8 @@
 FROM node:16  
 # Installing libvips-dev for sharp Compatability  
 RUN apt-get update && apt-get install libvips-dev -y  
-ARG NODE\_ENV=production  
-ENV NODE\_ENV=${NODE\_ENV}  
+ARG NODE_ENV=production  
+ENV $(cat .env)  
 WORKDIR /opt/  
 COPY ./package.json ./yarn.lock ./  
 ENV PATH /opt/node\_modules/.bin:$PATH  
