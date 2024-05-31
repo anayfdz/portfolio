@@ -6,7 +6,7 @@ ENV $(cat .env)
 WORKDIR /opt/  
 COPY ./package.json ./yarn.lock ./  
 ENV PATH /opt/node\_modules/.bin:$PATH  
-COPY ../portfolio . 
+COPY ./portfolio . 
 WORKDIR /opt/app  
 COPY ./ .  
 RUN yarn build  
