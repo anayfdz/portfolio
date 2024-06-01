@@ -3,15 +3,8 @@ FROM node:18
 # Instalando libvips-dev para compatibilidad con sharp
 RUN apt-get update && apt-get install -y libvips-dev
 
-# Configurar las variables de entorno
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
-
 # Establecer el directorio de trabajo
 WORKDIR /opt/app
-
-# Copiar el archivo .env
-COPY .env .env
 
 # Copiar package.json y yarn.lock
 COPY package.json yarn.lock ./
