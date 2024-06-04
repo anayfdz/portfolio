@@ -10,6 +10,7 @@ WORKDIR /opt/app
 COPY package.json yarn.lock ./
 
 # Aumentar el tiempo de espera de la red y luego instalar las dependencias
+#RUN yarn config set network-timeout 600000 -g && yarn install
 RUN yarn config set network-timeout 600000 -g && yarn install
 
 # Copiar el resto de los archivos de la aplicación
@@ -21,5 +22,5 @@ RUN yarn build
 # Exponer el puerto de la aplicación
 EXPOSE 1337
 
-# Iniciar la aplicación
+#CMD para strapi
 CMD ["yarn", "start"]
