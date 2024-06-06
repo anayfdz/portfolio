@@ -19,8 +19,5 @@ COPY . .
 # Construir la aplicación
 RUN yarn build
 
-# Exponer el puerto de la aplicación
-EXPOSE 1337
-
 #CMD para strapi
 CMD ["yarn", "start"]
