@@ -1,7 +1,7 @@
-FROM node:18
+FROM node:18-alpine
 
 # Instalando libvips-dev para compatibilidad con sharp
-RUN apt-get update && apt-get install -y libvips-dev
+RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev git
 
 # Establecer el directorio de trabajo
 WORKDIR /opt/app
@@ -13,11 +13,12 @@ COPY package.json yarn.lock ./
 #RUN yarn config set network-timeout 600000 -g && yarn install
 RUN yarn config set network-timeout 600000 -g && yarn install
 
+WORKDIR /opt/app
 # Copiar el resto de los archivos de la aplicación
 COPY . .
-
+RUN chown -R node:node /opt/app
 # Construir la aplicación
 RUN yarn build
 
 #CMD para strapi
-CMD ["yarn", "start"]
+CMD ["yarn", "develop"]
