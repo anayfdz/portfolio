@@ -24,7 +24,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Bachelor Degree in Contaduría Pública</li>
+        <li>Licenciada en Contaduría Pública</li>
         <li>Universidad Dr. José Gregorio Hernández</li>
       </ul>
     ),
@@ -34,8 +34,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Aws Cloud Practitioner</li>
-        <li>Google Profesional Cloud Developer</li>
+        <li>Frontend Developer - Meta</li>
+        <li>Backend Developer - Meta</li>
       </ul>
     ),
   },
@@ -55,12 +55,12 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">Sobre Mí</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            Hola, soy Ana; Tengo 28 años y soy desarrolladora backend. Comencé a
+            programar en pandemia y seguí especializándome mientras trabajaba
+            como desarrolladora fullstack. Hoy en día, además de programación,
+            estudio sobre desarrollo mobile y además
+            de todo esto, me encanta pasar tiempo con mi perro, ver mis series
+            favoritas y crear contenido para las redes.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -75,14 +75,14 @@ const AboutSection = () => {
               active={tab === "education"}
             >
               {" "}
-              Education{" "}
+              Educación{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
               {" "}
-              Certifications{" "}
+              Certificaciones{" "}
             </TabButton>
           </div>
           <div className="mt-8">

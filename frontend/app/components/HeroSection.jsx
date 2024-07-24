@@ -26,10 +26,10 @@ const HeroSection = () => {
                 1000,
                 "Web Developer",
                 1000,
-                "Mobile Developer",
-                1000,
-                "UI/UX Designer",
-                1000,
+                // "Mobile Developer",
+                // 1000,
+                // "UI/UX Designer",
+                // 1000,
               ]}
               wrapper="span"
               speed={50}
@@ -37,24 +37,24 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            similique non dignissimos voluptate voluptatem inventore
-            perspiciatis ab quis quidem, voluptatum fuga minus sit! Magni,
-            voluptates soluta consequatur nobis ducimus adipisci!
+            Cuento con experiencia de 3 años en la industria tecnológica y soy
+            altamente competente en el desarrollo de aplicaciones a la medida.
+            En base a mi experiencia propongo soluciones que permitan optimizar
+            los procesos.
           </p>
           <div>
             <Link
               href="/#contact"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-purple-500 to-pink-500 hover:bg-slate-200 text-white"
             >
-              Hire Me
+              Contáctame
             </Link>
             <Link
               href="/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-pink-500 hover:bg-slate-800 text-white  mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
+                Visitar Tienda
               </span>
             </Link>
           </div>
