@@ -39,6 +39,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
+    },
+    "resumen": {
+      "type": "string"
     }
   }
 }
